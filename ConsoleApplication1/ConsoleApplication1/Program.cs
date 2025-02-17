@@ -11,9 +11,11 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Console.Write("Enter product name: ");
+            
         string productName = Console.ReadLine();
 
-        string connectionString = "your_connection_string_here";
+        string connectionString = "your_connection_string_here.";
+            
         string query = "SELECT * FROM Products WHERE Name LIKE '" + productName + "%'";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
